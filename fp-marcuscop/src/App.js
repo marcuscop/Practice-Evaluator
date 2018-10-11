@@ -475,12 +475,16 @@ class App extends Component {
     return (
       <div className="content is-large has-text-centered">
 
+          <p>
           <div className="container is-widescreen">
-
+          <div className="hero">
+          <div className = "box">
           <h1>Practice Evaluator</h1>
           <h6 className="content is-medium" ><i>WPI Mens Rowing</i></h6>
-
           </div>
+          </div>
+          </div>
+          </p>
 
           <p>
           <div className = "container is-widescreen">
