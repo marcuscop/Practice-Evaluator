@@ -33,6 +33,7 @@ const client = new Client({
   connectionString: connectionString
 });
 
+app.use(express.static(path.join(__dirname, '/fp-marcuscop/build/')));
 
 var query_string = "CREATE TABLE gpx (id SERIAL PRIMARY KEY, lon VARCHAR(100) NOT NULL, lat VARCHAR(100) NOT NULL, timeOfDay VARCHAR(100) NOT NULL);"
 + "CREATE TABLE csv ( id  SERIAL PRIMARY KEY, distance VARCHAR(100) NOT NULL, elapsed VARCHAR(100) NOT NULL, strcount VARCHAR(100) NOT NULL, rate VARCHAR(100) NOT NULL, checkf VARCHAR(100) NOT NULL, splspeed VARCHAR(100) NOT NULL, speed VARCHAR(100) NOT NULL, dispstr VARCHAR(100) NOT NULL);"
@@ -50,7 +51,6 @@ pool.connect(function(err, client, done){
   });
 });
 
-app.use(express.static(path.join(__dirname, '/fp-marcuscop/build/')));
 
 app.get('/', (req, res) => {
   res.sendFile('/index.html', { root: path.join(__dirname, '/fp-marcuscop/build/') });
