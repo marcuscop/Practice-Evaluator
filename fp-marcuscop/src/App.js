@@ -321,11 +321,12 @@ class App extends Component {
         var newsplit = newavg.toString()+":"+avg_split.toString();
         avg_disStr = (avg_disStr/csv.length).toFixed(2);
         tot_dis = csv[csv.length-1].distance;
-        document.getElementById("stats").innerHTML = "<li><ul>Average stroke rate (str/min): <strong>" +
+        document.getElementById("stats").innerHTML = "<div className='hero'>" +
+                                                      "<div className = 'box'><li><ul>Average stroke rate (str/min): <strong>" +
                                                       avg_rate.toString() + "</strong></ul><ul>Average Split (time/500m): <strong>" +
                                                       newsplit + "</strong></ul><ul>Average Distance per Stroke (m): <strong>" +
                                                       avg_disStr.toString() + "</strong></ul><ul>Total Distance (m): <strong>" +
-                                                      tot_dis.toString() + "</strong></ul></li>";
+                                                      tot_dis.toString() + "</strong></ul></li></div></div>";
 
   }
 
@@ -483,11 +484,7 @@ class App extends Component {
 
           <p>
           <div className = "container is-widescreen">
-          <div className="hero">
-          <div className = "box">
             <div id="stats"></div>
-          </div>
-          </div>
           </div>
           </p>
 
