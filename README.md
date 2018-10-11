@@ -33,7 +33,7 @@ The average stats are reported to the user:
 - Check Factor (smoothness of stroke)
 - Total Stroke Count
 
-#### There are sample .gpx and .csv files in the SAMPLE_FILES folder. Use corresponding files: Quinsigamond.gpx -> Quinsigamond.csv, Riverfront.gpx -> Riverfront.csv
+#### NOTE: There are sample .gpx and .csv files in the SAMPLE_FILES folder. Use corresponding files: Quinsigamond.gpx -> Quinsigamond.csv, Riverfront.gpx -> Riverfront.csv
 
 ## Technical Achievements
 - **Tech Achievement 1**: React.js - re-worked entire framework of the project to use components in React so that development and updating map data would be easier.
