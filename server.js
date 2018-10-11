@@ -51,11 +51,12 @@ pool.connect(function(err, client, done){
 });
 */
 
-app.use(express.static(path.join(__dirname, './build/')));
+app.use(express.static(path.join(__dirname, '/fp-marcuscop/build/')));
 
 
 app.get('/', (req, res) => {
-  res.sendFile('/index.html', { root: path.join(__dirname, './build/') });
+  const index = path.join(__dirname, 'fp-marcuscop','build', 'index.html');
+  res.sendFile(index);
 });
 
 app.get('/get_gpx', (req, res) => {
@@ -180,7 +181,7 @@ app.post ('/name', (req, res) => {
 
 });
 
-app.listen(process.env.PORT || 5432, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log('server running');
 });
 
