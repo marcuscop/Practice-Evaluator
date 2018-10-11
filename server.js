@@ -180,7 +180,7 @@ app.post ('/name', (req, res) => {
 
 });
 
-app.listen(3000, () => {
+app.listen(5432, () => {
   console.log('server running');
 });
 
